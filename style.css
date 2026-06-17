@@ -27,6 +27,32 @@ em { color: var(--gold-light); font-style: italic; }
 .nav-back { color: var(--gold); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
 .nav-back:hover { color: var(--gold-light); }
 
+/* Hook */
+.hook-section {
+  text-align: center;
+  padding: 100px 24px 90px;
+  background: var(--black);
+  border-bottom: 1px solid var(--gold);
+}
+.hook-pre {
+  font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+}
+.hook-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; font-weight: 700;
+  line-height: 1.15; margin: 0 auto 24px;
+  max-width: 680px;
+}
+.hook-sub {
+  max-width: 560px; margin: 0 auto 36px;
+  color: #bbb; font-size: 1rem; line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .hook-headline { font-size: 2rem; }
+}
+
 /* Hero */
 .hero { text-align: center; padding: 90px 24px 70px; border-bottom: 1px solid var(--gold); }
 .hero-logo { height: 70px; margin-bottom: 20px; }
