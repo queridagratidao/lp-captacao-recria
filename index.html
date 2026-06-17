@@ -234,6 +234,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const SCRIPT_URL = 'COLE_A_URL_DO_APPS_SCRIPT_AQUI';
 
+function detectarCanal() {
+  const params = new URLSearchParams(window.location.search);
+  const source = (params.get('utm_source') || '').toLowerCase();
+  if (source.includes('google')) return 'Google';
+  if (source.includes('instagram') || source.includes('ig') || source.includes('facebook') || source.includes('fb')) return 'Instagram';
+  if (source) return source;
+  return 'Orgânico';
+}
+
 document.getElementById('leadForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
@@ -242,6 +251,7 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   btn.disabled = true;
 
   const data = {
+    canal: detectarCanal(),
     nome: document.getElementById('nome').value,
     negocio: document.getElementById('negocio').value,
     whatsapp: document.getElementById('whatsapp').value,

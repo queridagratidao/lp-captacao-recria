@@ -1,7 +1,7 @@
 // Google Apps Script — Cola isso em script.google.com
 // depois de criar a planilha no Google Sheets
 
-const EMAIL_NOTIFICACAO = 'recria.agenciamkt@gmail.com';
+const EMAIL_NOTIFICACAO = 'amandarecria@gmail.com';
 const NOME_PLANILHA = 'Leads Recria';
 
 function doPost(e) {
@@ -12,8 +12,8 @@ function doPost(e) {
 
     if (!aba) {
       aba = ss.insertSheet(NOME_PLANILHA);
-      aba.appendRow(['Data', 'Nome', 'Negócio', 'WhatsApp', 'E-mail', 'Momento', 'Mensagem']);
-      aba.getRange(1, 1, 1, 7).setFontWeight('bold');
+      aba.appendRow(['Data', 'Canal', 'Nome', 'Negócio', 'WhatsApp', 'E-mail', 'Momento', 'Mensagem']);
+      aba.getRange(1, 1, 1, 8).setFontWeight('bold');
     }
 
     const agora = new Date();
@@ -21,6 +21,7 @@ function doPost(e) {
 
     aba.appendRow([
       dataFormatada,
+      dados.canal || 'Orgânico',
       dados.nome || '',
       dados.negocio || '',
       dados.whatsapp || '',
@@ -33,6 +34,7 @@ function doPost(e) {
     const corpo = `
 Novo lead entrou pela LP da Recria!
 
+Canal: ${dados.canal || 'Orgânico'}
 Nome: ${dados.nome}
 Negócio: ${dados.negocio}
 WhatsApp: ${dados.whatsapp}
