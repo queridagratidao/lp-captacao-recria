@@ -95,6 +95,19 @@ em { color: var(--gold-light); font-style: italic; }
 .aviso-section h2 { margin-bottom: 20px; }
 .aviso-section p { color: #bbb; margin-bottom: 14px; font-size: 0.95rem; }
 
+/* Jornada */
+.jornada-section { background: var(--black); }
+.jornada { max-width: 600px; margin: 0 auto 48px; }
+.jornada-item { display: flex; gap: 20px; align-items: flex-start; }
+.jornada-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); opacity: 0.5; min-width: 44px; line-height: 1; }
+.jornada-content h3 { color: var(--gold-light); font-size: 1.05rem; margin-bottom: 6px; }
+.jornada-content p { color: #bbb; font-size: 0.88rem; }
+.jornada-seta { text-align: center; color: var(--gold); font-size: 1.4rem; margin: 10px 0 10px 22px; opacity: 0.5; }
+.jornada-dados { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; border-top: 1px solid rgba(201,162,78,0.3); padding-top: 36px; }
+.dado-item { text-align: center; }
+.dado-num { display: block; font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--gold-light); }
+.dado-label { display: block; font-size: 0.8rem; color: #888; margin-top: 6px; }
+
 /* Form */
 .form-section { text-align: center; }
 .form-sub { color: #bbb; max-width: 480px; margin: 0 auto 32px; font-size: 0.95rem; }
